@@ -15,6 +15,13 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
+// I'm traditionally used to using mocking libraries for everything, but the resources I referenced
+// make it appear that Go developers tend to prefer just regular dependency injection rather than
+// using mocks, so I stuck with that for now. However, having mocks would've substantially made
+// it easier for me to set up my unit tests with true isolation as I test each of my components
+// by layer (i.e. controller can more explicitly mock the services, service can mock the clients,
+// clients can mock the HTTP requests, etc.).
+
 // Controller - getUserPostsByUserId
 
 func TestGetUserPostsByUserIdSuccess(t *testing.T) {
@@ -476,6 +483,7 @@ func TestTypicodeClientGetPostsByUserId500(t *testing.T) {
 }
 
 // Test Helpers
+//
 
 type mockHTTPClient struct{}
 

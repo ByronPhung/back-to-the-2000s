@@ -5,7 +5,7 @@ In all seriousness, this introductory project explores implementing a standalone
 
 # Prerequisites
 * **An installation of Go 1.17 or later.** For installation instructions, see [Installing Go](https://go.dev/doc/install).
-* **A command terminal.** Your installation of Go should already have setup for any Linux and Mac terminal as well as PowerShell and cmd on Windows. If you're missing this for whatever reason, then you can double-check [Go's Installation Page] and attempt to reinstall one more time.
+* **A command terminal.** Your installation of Go should already have setup for any Linux and Mac terminal as well as PowerShell and cmd on Windows. If you're missing this for whatever reason, then you can double-check [Go's Installation Page](https://go.dev/doc/install) and attempt to reinstall one more time.
 * **The curl tool.** So we can actually test and use our program's server :). This should already be installed on Linux and Mac as well as Windows 10 Insider build 17063 and later. If absolutely needed, you can [download curl directly from the main website](https://curl.se/download.html).
 
 # Execution
