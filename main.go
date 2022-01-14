@@ -71,25 +71,6 @@ func getUserPostsByUserId(c *gin.Context) {
 		return
 	}
 
-	// In a more formal project, both the client and service would probably get instantiated once-and-only-once
-	// in a more global context, such as during service startup, so that it can be shared across different services.
-	// userPostService := userPostService{
-	// 	TypicodeClient: typicodeClient{
-	// 		// Right now, we don't care about any special customizations for the sake of this project,
-	// 		// but if we wanted to customize certain attributes, such as timeouts, redirect policies, etc.,
-	// 		// then it would make sense to inject a customized client
-	// 		//
-	// 		// Also, in a more formal project, the http.Client, typicodeClient, and userPostService would probably
-	// 		// get instantiated once-and-only-once in a more global context, such as during service startup, so that
-	// 		// they can be shared across different services.
-	// 		Client: http.DefaultClient,
-
-	// 		// If we were testing across multiple environments, then this would probably make more sense as
-	// 		// a config/environment variable.
-	// 		BaseUrl: "https://jsonplaceholder.typicode.com",
-	// 	},
-	// }
-
 	userPostsResp, err := userPostServiceImpl.getUserPostsByUserId(userIdInt)
 
 	// We have a defined value. Return a 200 with the JSON response.
